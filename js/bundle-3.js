@@ -418,7 +418,7 @@ var Viamagus_Website_Loader =  {
 },_setActiveMenuLink:function(){
    var documentUrl = document.URL;
    var urlContent =  document.URL.split('/');
-   var pageName='home.html';
+   var pageName='index.html';
    var enableOnePageNav= false;
   
    var sectionName ='';
@@ -440,7 +440,7 @@ var Viamagus_Website_Loader =  {
 				pageName = urlContent[i];
 			}
 			if(urlContent[i].indexOf('#')!=-1){
-				pageName = "home.html";
+				pageName = "index.html";
 				if(urlContent[i].search('.html')!=-1){
 				  pageName =urlContent[i].split('#')[0];
 				  if(urlContent[i].split('#')[1]!=null && urlContent[i].split('#')[1]!="" && $('#'+urlContent[i].split('#')[1]).length){
@@ -488,7 +488,7 @@ var Viamagus_Website_Loader =  {
 				   });
 				 }
 
-				if(linkTarget==pageName || (pageName=='home.html' && linkTarget=='/')){
+				if(linkTarget==pageName || (pageName=='index.html' && (linkTarget=='/' || linkTarget=='index.html'))){
 					$(link).addClass('active');
 				}
 			});
@@ -1775,7 +1775,7 @@ var Viamagus_Website_Loader =  {
 },_customizeViamagusButtonClickEvent:function(){
 
 	  $('.viamagus-cart-button a.btn').click(function(e){
-		var pageName="home.html";
+		var pageName="index.html";
 		var urlContent =  document.URL.split('/');
 		for(var i in urlContent){
 			if(urlContent[i].search('.html')!=-1 && urlContent[i].indexOf('#')==-1){
@@ -1803,7 +1803,7 @@ var Viamagus_Website_Loader =  {
 		}
 	  });
 	  $('.viamagus-image-text a.btn').click(function(e){
-		var pageName="home.html";
+		var pageName="index.html";
 		var urlContent =  document.URL.split('/');
 		for(var i in urlContent){
 			if(urlContent[i].search('.html')!=-1 && urlContent[i].indexOf('#')==-1){

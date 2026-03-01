@@ -6460,7 +6460,7 @@ Viamagus_Cart_Manager = {
         }).done(function(data) {
             $('.viamagus-ecom-sign-in-link-section').show();
             $('.viamagus-ecom-sign-in-success').hide();
-            window.location.href = "home.html";
+            window.location.href = "index.html";
         });
     },
     loadMyOrders: function() {
